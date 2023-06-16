@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <Disclosure
       as="nav"
-      className="sticky top-0 bg-ldJetBlack font-spaceGrotesk"
+      className="sticky top-0 h-16 bg-ldJetBlack font-spaceGrotesk"
     >
       {({ open, close }) => (
         <>

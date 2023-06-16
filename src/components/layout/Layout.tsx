@@ -1,6 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
+import Footer from "./Footer";
+
+import styles from "./layout.module.css";
 
 type TLayoutProps = {
   children: React.ReactNode;
@@ -18,7 +21,11 @@ const Layout = ({ children }: TLayoutProps) => {
         <link rel="icon" href="/ladao.svg" />
       </Head>
       <Header />
-      <main>{children}</main>
+      {/* eslint-disable-next-line @typescript-eslint/restrict-template-expressions */}
+      <main className={`flex items-center bg-ldJetBlack ${styles.main}`}>
+        {children}
+      </main>
+      <Footer />
     </>
   );
 };
