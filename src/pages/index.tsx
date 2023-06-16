@@ -7,11 +7,12 @@ const Home: NextPage = () => {
 
   return (
     <div className="container flex flex-col items-center justify-center gap-12 bg-ldJetBlack px-4 py-16 font-spaceGrotesk">
-      <h1 className="text-5xl font-medium tracking-tight text-white sm:text-[5rem]">
-        Una comunidad apasionada por{" "}
+      <h1 className="text-5xl font-medium tracking-tight text-white md:max-w-md lg:max-w-none">
+        Una comunidad <br className="hidden lg:block" />
+        apasionada por <br />
         <span className="text-6xl font-bold text-primary">DeFi</span>
       </h1>
-      <h3 className="pl-4 pr-8 text-2xl text-white">
+      <h3 className="pl-4 pr-8 text-2xl text-white md:max-w-lg lg:max-w-xl lg:px-0 lg:text-center">
         Conecta, contribuye y construye el futuro del internet, la propiedad
         digital y las comunidades
       </h3>

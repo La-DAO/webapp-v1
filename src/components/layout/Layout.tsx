@@ -22,7 +22,7 @@ const Layout = ({ children }: TLayoutProps) => {
       </Head>
       <Header />
       {/* eslint-disable-next-line @typescript-eslint/restrict-template-expressions */}
-      <main className={`flex items-center bg-ldJetBlack ${styles.main}`}>
+      <main className={`flex w-full items-center bg-ldJetBlack ${styles.main}`}>
         {children}
       </main>
       <Footer />
