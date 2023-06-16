@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
   return (
-    <div className="container flex flex-col items-center justify-center gap-12 bg-ldJetBlack px-4 py-16 font-spaceGrotesk">
+    <div className="container mb-16 flex flex-col items-center justify-center gap-12 bg-ldJetBlack px-4 pb-16 pt-2 font-spaceGrotesk lg:mb-8">
       <h1 className="text-5xl font-medium tracking-tight text-white md:max-w-md lg:max-w-none">
         Una comunidad <br className="hidden lg:block" />
         apasionada por <br />
@@ -16,12 +16,14 @@ const Home: NextPage = () => {
         Conecta, contribuye y construye el futuro del internet, la propiedad
         digital y las comunidades
       </h3>
-      <button
-        type="button"
-        className="rounded-md bg-ldPrimaryOrange-500 px-8 py-4 text-xl font-semibold text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
-      >
-        Únete a La DAO
-      </button>
+      <Link href="/membresia">
+        <button
+          type="button"
+          className="rounded-md bg-ldPrimaryOrange-500 px-8 py-4 text-xl font-semibold text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
+        >
+          Únete a La DAO
+        </button>
+      </Link>
     </div>
   );
 };
