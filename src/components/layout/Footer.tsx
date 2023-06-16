@@ -61,7 +61,7 @@ const navigation = [
 
 const Footer = () => (
   <footer className="bg-ldJetBlack">
-    <div className="mx-auto max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
+    <div className="mx-auto p-6 md:flex md:items-center md:justify-between md:px-8 lg:px-12">
       <div className="flex justify-center space-x-6 md:order-2">
         {navigation.map((item) => (
           <a
@@ -77,7 +77,7 @@ const Footer = () => (
         ))}
       </div>
       <div className="mt-4 md:order-1 md:mt-0">
-        <p className="text-center text-xs leading-5 text-white">
+        <p className="text-center text-sm leading-5 text-white">
           &copy; {new Date().getFullYear()} La DAO. Todos los derechos
           reservados.
         </p>

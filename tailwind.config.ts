@@ -21,6 +21,13 @@ export default {
           800: "#a9402b",
           900: "#913725",
         },
+        ldSageGreen: {
+          100: "#9CA578",
+          300: "#889362",
+          500: "#69714c",
+          700: "#444931",
+          900: "#2D3121",
+        },
         primary: ldPrimaryOrange,
       },
       fontFamily: {
