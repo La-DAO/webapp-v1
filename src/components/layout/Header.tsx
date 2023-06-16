@@ -47,7 +47,7 @@ const Header = () => {
                           item.href === pathname
                             ? "text-white underline decoration-ldPrimaryOrange-500 decoration-2 underline-offset-8"
                             : "text-gray-300 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700"
+                          "rounded-md px-3 py-2 font-medium hover:bg-gray-700 md:text-base"
                         )}
                         aria-current={
                           item.href === pathname ? "page" : undefined
@@ -61,7 +61,7 @@ const Header = () => {
                   <div className="flex-shrink-0">
                     <button
                       type="button"
-                      className="relative inline-flex items-center gap-x-1.5 rounded-md bg-ldPrimaryOrange-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
+                      className="relative inline-flex items-center gap-x-1.5 rounded-md bg-ldPrimaryOrange-500 px-6 py-2 text-base font-medium text-white shadow-sm hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
                     >
                       Únete
                     </button>
