@@ -1,5 +1,7 @@
 import { type Config } from "tailwindcss";
 
+import defaultTheme from "tailwindcss/defaultTheme";
+
 const ldPrimaryOrange = "#f25b3d";
 
 export default {
@@ -20,6 +22,9 @@ export default {
           900: "#913725",
         },
         primary: ldPrimaryOrange,
+      },
+      fontFamily: {
+        spaceGrotesk: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
       },
     },
   },

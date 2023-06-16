@@ -20,7 +20,10 @@ const Header = () => {
   const { asPath: pathname } = useRouter();
 
   return (
-    <Disclosure as="nav" className="bg-ldJetBlack">
+    <Disclosure
+      as="nav"
+      className="sticky top-0 bg-ldJetBlack font-spaceGrotesk"
+    >
       {({ open, close }) => (
         <>
           <div className="mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,7 +89,7 @@ const Header = () => {
           </div>
 
           <Disclosure.Panel className="md:hidden">
-            <div className="absolute w-full space-y-4 bg-ldJetBlack px-2 pb-3 pt-2 sm:px-3">
+            <div className="absolute w-full space-y-4 bg-ldJetBlack px-2 pb-8 pt-4 sm:px-3">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -95,7 +98,7 @@ const Header = () => {
                     item.href === pathname
                       ? "text-white underline decoration-primary decoration-2 underline-offset-8"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium"
+                    "block rounded-md px-3 py-2 text-lg font-medium"
                   )}
                   aria-current={item.href === pathname ? "page" : undefined}
                 >
