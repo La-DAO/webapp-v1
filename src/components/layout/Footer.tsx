@@ -68,6 +68,8 @@ const Footer = () => (
             key={item.name}
             href={item.href}
             className="text-white hover:text-gray-500"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <span className="sr-only">{item.name}</span>
             <item.icon className="h-6 w-6" aria-hidden="true" />
