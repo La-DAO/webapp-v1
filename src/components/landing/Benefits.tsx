@@ -42,7 +42,7 @@ const Benefits = () => {
             <h4 className="text-xl font-bold leading-relaxed tracking-tight text-gray-900 sm:text-2xl">
               Más que una DAO
             </h4>
-            <h2 className="mt-2 text-3xl font-bold leading-snug tracking-tight text-gray-900 sm:text-4xl md:leading-normal lg:leading-snug xl:leading-relaxed">
+            <h2 className="mt-2 text-3xl font-bold leading-snug tracking-tight text-gray-900 sm:text-4xl xl:leading-normal">
               Una comunidad{" "}
               <span className="font-bolder text-primary">descentralizada</span>,{" "}
               <br />
@@ -50,7 +50,7 @@ const Benefits = () => {
               el <span className="font-bolder text-primary">futuro</span>
             </h2>
           </div>
-          <dl className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2">
+          <dl className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:mt-8">
             {features.map((feature) => (
               <div key={feature.name}>
                 <dt className="font-spaceGrotesk text-xl font-semibold leading-7 text-gray-900 md:text-lg lg:text-xl">
