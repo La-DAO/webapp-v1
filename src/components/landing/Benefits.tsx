@@ -35,14 +35,14 @@ const features = [
 
 const Benefits = () => {
   return (
-    <section className="min-h-[calc(100vh-64px)] w-full bg-ldBeigeWhite py-24 sm:py-32">
+    <section className="min-h-[calc(100vh-64px)] w-full bg-ldBeigeWhite py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div>
             <h4 className="text-xl font-bold leading-relaxed tracking-tight text-gray-900 sm:text-2xl">
               Más que una DAO
             </h4>
-            <h2 className="mt-2 text-3xl font-bold leading-snug tracking-tight text-gray-900 sm:text-4xl xl:leading-normal">
+            <h2 className="text-3xl font-bold leading-snug tracking-tight text-gray-900 sm:text-4xl xl:leading-normal">
               Una comunidad{" "}
               <span className="font-bolder text-primary">descentralizada</span>,{" "}
               <br />
