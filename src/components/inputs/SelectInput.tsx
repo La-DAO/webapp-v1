@@ -1,7 +1,7 @@
 import { type Dispatch, Fragment, type SetStateAction } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import { type TProject } from "../landing/Projects";
+import { type TProject } from "~/types/projects";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");

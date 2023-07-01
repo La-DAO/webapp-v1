@@ -54,7 +54,7 @@ const Benefits = () => {
             {features.map((feature) => (
               <div key={feature.name}>
                 <dt className="font-spaceGrotesk text-xl font-semibold leading-7 text-gray-900 md:text-lg lg:text-xl">
-                  <div className="mb-6 ml-4 flex h-10 w-10 items-center justify-center rounded-lg bg-ldPrimaryOrange-500 md:ml-2">
+                  <div className="mb-6 ml-4 flex h-10 w-10 items-center justify-center rounded-md bg-ldPrimaryOrange-500 md:ml-2">
                     <feature.icon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"

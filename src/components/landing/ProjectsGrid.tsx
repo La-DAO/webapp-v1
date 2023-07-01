@@ -1,95 +1,24 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import Image from "next/image";
+import { type TProject } from "~/types/projects";
 
-const placeholderImgUrl = "/images/logos/ladao-bg.jpg";
-
-export type TProject = {
-  id: number;
-  imageUrl?: HTMLImageElement | string;
-  name: string;
-  githubUrl?: string;
-  twitterUrl?: string;
-  link: { href: string; label: string };
-  shortDescription: string;
-  tags: string[];
+type TProjectsGridProps = {
+  projects: TProject[];
 };
 
-const projectsData: TProject[] = [
-  {
-    id: 1,
-    imageUrl: placeholderImgUrl,
-    name: "$XOC | Xocolatl",
-    githubUrl: "https://github.com",
-    twitterUrl: "https://twitter.com/",
-    link: { href: "https://xocolatl.finance", label: "xocolatl.finance" },
-    shortDescription: "Moneda estable",
-    tags: ["DeFi"],
-  },
-  {
-    id: 2,
-    imageUrl: placeholderImgUrl,
-    name: "La DAO Club",
-    githubUrl: "https://github.com",
-    twitterUrl: "https://twitter.com/",
-    link: { href: "https://ladao.club/membresia", label: "Obtén tu Membresía" },
-    shortDescription: "Membresía NFT",
-    tags: ["NFT"],
-  },
-  {
-    id: 3,
-    imageUrl: placeholderImgUrl,
-    name: "Suarmi",
-    githubUrl: "https://github.com",
-    twitterUrl: "https://twitter.com/",
-    link: { href: "https://suarmi.com", label: "suarmi.com" },
-    shortDescription: "On-Off Ramp",
-    tags: ["DeFi"],
-  },
-  {
-    id: 4,
-    imageUrl: placeholderImgUrl,
-    name: "jMXN | Jarvis",
-    githubUrl: "https://github.com",
-    twitterUrl: "https://twitter.com/",
-    link: { href: "https://jarvis.network/", label: "jarvis.network" },
-    shortDescription: "Moneda Estable",
-    tags: ["DeFi"],
-  },
-  {
-    id: 5,
-    imageUrl: placeholderImgUrl,
-    name: "POEP | NFTs",
-    githubUrl: "https://github.com",
-    twitterUrl: "https://twitter.com/",
-    link: { href: "https://ladao.club/poep", label: "Proof of Engagement" },
-    shortDescription: "Coleccionables",
-    tags: ["NFT"],
-  },
-  {
-    id: 5,
-    imageUrl: placeholderImgUrl,
-    name: "Frutero Club",
-    githubUrl: "https://github.com",
-    twitterUrl: "https://twitter.com/",
-    link: { href: "https://ladao.club/poep", label: "Proof of Engagement" },
-    shortDescription: "Comunidad Dev",
-    tags: ["Comunidad", "Builders"],
-  },
-];
-
-export default function ProjectsGrid() {
+export default function ProjectsGrid({ projects }: TProjectsGridProps) {
   return (
     <ul role="list" className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3">
-      {projectsData.map((project) => (
+      {projects.map((project) => (
         <li
           key={project.id}
-          className="overflow-hidden rounded-lg border border-gray-200 bg-ldBeigeWhite"
+          className="overflow-hidden rounded-lg border border-gray-200 bg-[#FFFDF5] hover:cursor-pointer hover:ring-2 hover:ring-primary"
         >
           <div className="flex items-center gap-x-2 border-b border-gray-900/5 p-4">
             <Image
               src={project.imageUrl as string}
               alt={project.name}
-              className="h-8 w-8 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
+              className="h-8 w-8 flex-none rounded-lg object-cover ring-1 ring-gray-900/10"
               width={64}
               height={64}
             />
@@ -105,7 +34,7 @@ export default function ProjectsGrid() {
               {project.tags.map((tag) => (
                 <div
                   key={`${tag}_${project.id}`}
-                  className="rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset"
+                  className="rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset ring-primary"
                 >
                   {tag}
                 </div>

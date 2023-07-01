@@ -31,7 +31,7 @@ const Header = () => {
               <div className="flex">
                 <Link className="flex flex-shrink-0 items-center" href="/">
                   <LogoComponent />
-                  <span className="ml-2 text-xl font-medium text-white">
+                  <span className="ml-2 text-xl font-medium text-white hover:text-primary">
                     La DAO
                   </span>
                 </Link>
@@ -47,7 +47,7 @@ const Header = () => {
                           item.href === pathname
                             ? "text-white underline decoration-ldPrimaryOrange-500 decoration-2 underline-offset-8"
                             : "text-gray-300 hover:text-white",
-                          "rounded-md px-3 py-2 font-medium hover:bg-gray-700 md:text-base"
+                          "rounded-md px-3 py-2 font-medium hover:bg-gray-700 hover:ring-1 hover:ring-inset hover:ring-primary md:text-base"
                         )}
                         aria-current={
                           item.href === pathname ? "page" : undefined
@@ -100,13 +100,16 @@ const Header = () => {
                     item.href === pathname
                       ? "text-white underline decoration-primary decoration-2 underline-offset-8"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-lg font-medium"
+                    "block w-full rounded-md py-2 pl-12 text-lg font-medium"
                   )}
                   aria-current={item.href === pathname ? "page" : undefined}
                 >
-                  {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-explicit-any */}
-                  <Link href={item.href} onClick={close as any}>
-                    {item.name}
+                  <Link
+                    href={item.href}
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-explicit-any
+                    onClick={close as any}
+                  >
+                    <p className="w-full">{item.name}</p>
                   </Link>
                 </Disclosure.Button>
               ))}

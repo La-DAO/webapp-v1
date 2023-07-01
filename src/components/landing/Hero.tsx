@@ -30,7 +30,7 @@ const Hero = () => {
           <Link href="/membresia">
             <button
               type="button"
-              className="rounded-md bg-ldPrimaryOrange-500 px-8 py-4 text-xl font-semibold text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
+              className="rounded-md bg-ldPrimaryOrange-500 px-8 py-3 text-xl font-semibold text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
             >
               Únete a La DAO
             </button>
