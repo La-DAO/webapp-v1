@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        ldJetBlack: "#2e2e2c",
+        ldJetBlack: "#1A1A17",
         ldAlmostWhite: "#FFFDF5",
         ldBeigeWhite: "#f6f2e6",
         ldDeepGreen: "#1F4038",
