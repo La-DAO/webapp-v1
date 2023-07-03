@@ -10,7 +10,9 @@ export default {
     extend: {
       colors: {
         ldJetBlack: "#2e2e2c",
+        ldAlmostWhite: "#FFFDF5",
         ldBeigeWhite: "#f6f2e6",
+        ldDeepGreen: "#1F4038",
         ldPrimaryOrange: {
           100: "#f79d8b",
           200: "#f68c77",

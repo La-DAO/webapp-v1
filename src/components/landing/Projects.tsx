@@ -76,18 +76,21 @@ const Projects = () => {
             <h2 className="text-3xl font-bold leading-snug tracking-tight text-ldPrimaryOrange-500 sm:text-4xl xl:leading-normal">
               DeFi Mexicano: Proyectos
             </h2>
-            <p className="mt-4 font-spaceGrotesk text-xl font-semibold leading-7 text-ldBeigeWhite md:pl-2 md:pr-8 md:text-lg lg:pl-4 lg:pr-12 lg:text-xl">
+            <p className="mt-4 w-full font-spaceGrotesk text-xl font-medium leading-7 text-ldBeigeWhite md:pl-2 md:pr-8 md:text-lg lg:pr-8 lg:text-xl">
               Queremos construir el ecosistema DeFi más integrado del mundo.{" "}
               <br />
               Estos son algunos de los proyectos de nuestra comunidad.
             </p>
-            <p className="mt-4 font-spaceGrotesk text-xl font-semibold leading-7 text-ldBeigeWhite md:pl-2 md:pr-8 md:text-lg lg:pl-4 lg:pr-12 lg:text-xl">
+            <p className="mt-4 w-full font-spaceGrotesk text-xl font-medium leading-7 text-ldBeigeWhite md:pl-2 md:pr-8 md:text-lg lg:pr-8 lg:text-xl">
               Haz click en ellos para conocer más, ¡o únete y agrega el tuyo!
             </p>
-            <Link href="/proyectos" className="my-8 flex w-full justify-center">
+            <Link
+              href="/proyectos"
+              className="my-8 flex w-full justify-center md:pl-2 md:pr-8 lg:pr-8"
+            >
               <button
                 type="button"
-                className="rounded-md bg-ldPrimaryOrange-500 py-2.5 font-spaceGrotesk text-lg font-medium text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500 md:w-1/3 lg:w-1/2"
+                className="w-3/5 rounded-md bg-ldPrimaryOrange-500 py-2 font-spaceGrotesk text-lg font-medium text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500 md:w-1/3 lg:w-1/2"
               >
                 Agrega el tuyo
               </button>

@@ -6,7 +6,7 @@ import HeroBackgroundImg from "~/assets/images/background/HeroSectionBckgd.jpeg"
 const Hero = () => {
   return (
     <section className="container flex min-h-[calc(100vh-64px)] flex-col items-center justify-center gap-12 px-4 pb-28 pt-2 font-spaceGrotesk">
-      <div className="absolute inset-0 top-[64px] z-10 h-[calc(100vh-64px)] w-full bg-gradient-to-b from-ldJetBlack/100 to-ldSageGreen-700/75 object-cover"></div>
+      <div className="absolute inset-0 top-[64px] z-10 h-[calc(100vh-64px)] w-full bg-gradient-to-b from-ldJetBlack/100 to-[#1F4038]/50 object-cover"></div>
       <div className="absolute inset-0 top-[64px] h-[calc(100vh-64px)] w-full object-cover">
         <Image
           alt="Hero section background image"
