@@ -8,6 +8,10 @@
   width: 100vw;
 }
 
+body {
+  background-color: #2e2e2c;
+}
+
 h1,
 h2,
 h3,
