@@ -101,7 +101,7 @@ const Footer = () => (
         ))}
       </div>
       <div className="mt-4 md:order-1 md:mt-0">
-        <p className="text-center text-sm leading-5 text-white">
+        <p className="text-center font-spaceGrotesk text-sm leading-5 text-white">
           &copy; {new Date().getFullYear()} La DAO. Todos los derechos
           reservados.
         </p>
