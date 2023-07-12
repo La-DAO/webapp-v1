@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora&family=Space+Grotesk&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,4 +6,70 @@
 
 #__next {
   width: 100vw;
+}
+
+body {
+  background-color: #1a1a17;
+  color: #1a1a17;
+}
+
+div.ld-page {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 4rem);
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk";
+  font-weight: bold;
+}
+
+button {
+  font-family: "Space Grotesk";
+  font-weight: bold;
+}
+
+input,
+label,
+li,
+p {
+  font-family: "Sora";
+}
+
+h1 {
+  font-size: 2.25rem /* 36px */;
+  line-height: 2.5rem /* 40px */;
+}
+
+h2 {
+  font-size: 1.875rem /* 30px */;
+  line-height: 2.25rem /* 36px */;
+}
+
+h3 {
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+}
+
+h4 {
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
+}
+
+h5 {
+  font-size: 1.125rem /* 18px */;
+  line-height: 1.75rem /* 28px */;
+}
+
+h6 {
+  font-size: 1rem /* 16px */;
+  line-height: 1.5rem /* 24px */;
 }

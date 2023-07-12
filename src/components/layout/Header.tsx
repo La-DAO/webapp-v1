@@ -9,6 +9,7 @@ const navigation = [
   { name: "DeFi Mexicano", href: "/ecosistema", onlyMobile: false },
   { name: "Comunidad", href: "/comunidad", onlyMobile: false },
   { name: "Códices", href: "/codices", onlyMobile: false },
+  { name: "C3", href: "/c3", onlyMobile: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -29,11 +30,14 @@ const Header = () => {
           <div className="mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
               <div className="flex">
-                <Link className="flex flex-shrink-0 items-center" href="/">
-                  <LogoComponent />
-                  <span className="ml-2 text-xl font-medium text-white">
-                    La DAO
-                  </span>
+                <Link
+                  className="flex flex-shrink-0 items-center text-ldBeigeWhite hover:text-primary"
+                  href="/"
+                >
+                  <div className="mb-0.5">
+                    <LogoComponent />
+                  </div>
+                  <span className="ml-2 text-xl font-medium">La DAO</span>
                 </Link>
               </div>
               <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
@@ -45,9 +49,9 @@ const Header = () => {
                         href={item.href}
                         className={classNames(
                           item.href === pathname
-                            ? "text-white underline decoration-ldPrimaryOrange-500 decoration-2 underline-offset-8"
-                            : "text-gray-300 hover:text-white",
-                          "rounded-md px-3 py-2 font-medium hover:bg-gray-700 md:text-base"
+                            ? "underline decoration-ldPrimaryOrange-500 decoration-2 underline-offset-8"
+                            : "hover:texft-white",
+                          "rounded-md px-3 py-2 font-medium text-ldBeigeWhite hover:bg-gray-700 hover:ring-1 hover:ring-inset hover:ring-primary md:text-base"
                         )}
                         aria-current={
                           item.href === pathname ? "page" : undefined
@@ -59,7 +63,7 @@ const Header = () => {
                 )}
                 <div className="hidden items-center md:flex">
                   <div className="flex-shrink-0">
-                    <Link href="/membresia">
+                    <Link href="/gm">
                       <button
                         type="button"
                         className="relative inline-flex items-center gap-x-1.5 rounded-md bg-ldPrimaryOrange-500 px-6 py-2 text-base font-medium text-white shadow-sm hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
@@ -99,14 +103,17 @@ const Header = () => {
                   className={classNames(
                     item.href === pathname
                       ? "text-white underline decoration-primary decoration-2 underline-offset-8"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-lg font-medium"
+                      : "text-ldBeigeWhite hover:bg-gray-700 hover:text-white",
+                    "block w-full rounded-md py-2 pl-12 text-lg font-medium"
                   )}
                   aria-current={item.href === pathname ? "page" : undefined}
                 >
-                  {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-explicit-any */}
-                  <Link href={item.href} onClick={close as any}>
-                    {item.name}
+                  <Link
+                    href={item.href}
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-explicit-any
+                    onClick={close as any}
+                  >
+                    <p className="w-full">{item.name}</p>
                   </Link>
                 </Disclosure.Button>
               ))}

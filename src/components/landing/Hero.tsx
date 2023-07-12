@@ -6,7 +6,7 @@ import HeroBackgroundImg from "~/assets/images/background/HeroSectionBckgd.jpeg"
 const Hero = () => {
   return (
     <section className="container flex min-h-[calc(100vh-64px)] flex-col items-center justify-center gap-12 px-4 pb-28 pt-2 font-spaceGrotesk">
-      <div className="absolute inset-0 top-[64px] z-10 h-[calc(100vh-64px)] w-full bg-gradient-to-b from-ldJetBlack/100 to-ldSageGreen-700/75 object-cover"></div>
+      <div className="absolute inset-0 top-[64px] z-10 h-[calc(100vh-64px)] w-full bg-gradient-to-b from-ldJetBlack/100 to-[#1F4038]/50 object-cover"></div>
       <div className="absolute inset-0 top-[64px] h-[calc(100vh-64px)] w-full object-cover">
         <Image
           alt="Hero section background image"
@@ -27,10 +27,10 @@ const Hero = () => {
           digital y las comunidades
         </h3>
         <div className="mt-8 flex justify-center">
-          <Link href="/membresia">
+          <Link href="/gm">
             <button
               type="button"
-              className="rounded-md bg-ldPrimaryOrange-500 px-8 py-4 text-xl font-semibold text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
+              className="rounded-md bg-ldPrimaryOrange-500 px-8 py-3 text-xl font-semibold text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
             >
               Únete a La DAO
             </button>

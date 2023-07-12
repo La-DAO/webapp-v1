@@ -9,7 +9,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        ldJetBlack: "#2e2e2c",
+        ldNightBlack: "#0b0b0a",
+        ldJetBlack: "#1A1A17",
+        ldJetBlackTones: {
+          100: "#2B2B26",
+          300: "#23231F",
+          500: "#1A1A17",
+          700: "#181815",
+          900: "#161613",
+        },
+        ldAlmostWhite: "#FFFDF5",
+        ldBeigeWhite: "#f6f2e6",
+        ldDeepGreen: "#1F4038",
+        ldDeepGreenTones: {
+          100: "#2E6054",
+          300: "#275046",
+          500: "#1F4038",
+          700: "#1D2D28",
+          900: "#1C2420",
+        },
         ldPrimaryOrange: {
           100: "#f79d8b",
           200: "#f68c77",
@@ -32,7 +50,15 @@ export default {
       },
       fontFamily: {
         spaceGrotesk: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+        sora: ["Sora", ...defaultTheme.fontFamily.sans],
       },
+    },
+    listStyleType: {
+      none: "none",
+      disc: "disc",
+      decimal: "decimal",
+      square: "square",
+      roman: "upper-roman",
     },
   },
   plugins: [],
