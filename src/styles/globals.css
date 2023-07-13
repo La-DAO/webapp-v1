@@ -21,6 +21,7 @@ h6 {
   font-family: "Space Grotesk";
 }
 
-p {
+p,
+li {
   font-family: "Sora";
 }

@@ -9,6 +9,7 @@ const navigation = [
   { name: "DeFi Mexicano", href: "/ecosistema", onlyMobile: false },
   { name: "Comunidad", href: "/comunidad", onlyMobile: false },
   { name: "Códices", href: "/codices", onlyMobile: false },
+  { name: "C3", href: "/c3", onlyMobile: false },
 ];
 
 function classNames(...classes: string[]) {
