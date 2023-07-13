@@ -3,6 +3,7 @@ import Link from "next/link";
 type TLink = {
   name: string;
   href: string;
+  isExternal: boolean;
   tags: string[];
 };
 
@@ -12,7 +13,7 @@ type TLinksListCardProps = {
 };
 
 const LinksListCard = ({
-  header = "Docs",
+  header = "Title",
   links = [],
 }: TLinksListCardProps) => {
   const linksList = (
@@ -20,9 +21,10 @@ const LinksListCard = ({
       {links.map((link, index) => (
         <Link
           href={link.href}
-          target="_blank"
-          rel="noopener"
+          target={link.isExternal ? "_blank" : ""}
+          rel={link.isExternal ? "noopener" : ""}
           key={`technical_doc_link_${index + 1}`}
+          className="block w-fit"
         >
           <li className="my-3 decoration-primary">
             <span
@@ -40,7 +42,7 @@ const LinksListCard = ({
   );
 
   return (
-    <div className="flex flex-col rounded-md border-2 border-ldPrimaryOrange-600">
+    <div className="flex h-full w-full flex-col rounded-md border-2 border-ldPrimaryOrange-600">
       <div className="bg-primary py-2">
         <h4 className="px-8 text-xl font-bold text-ldJetBlack">{header}</h4>
       </div>
