@@ -71,7 +71,7 @@ const SOCIAL_LINKS = [
     href: "https://lensfrens.com/ladao",
     icon: () => (
       <svg
-        className="mr-2 flex h-6 w-6 items-center justify-center rounded-md bg-primary pl-[4px] pt-[3.5px] hover:text-ldPrimaryOrange-600"
+        className="mr-1.5 flex h-6 w-6 items-center justify-center rounded-md bg-primary pl-[4px] pt-[3.5px] hover:text-ldPrimaryOrange-600"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -172,7 +172,7 @@ const c3 = () => {
                     rel="noopener noreferrer"
                   >
                     <item.icon
-                      className="mr-2 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
+                      className="mr-1.5 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
                       aria-hidden="true"
                     />
                     <span
@@ -200,7 +200,7 @@ const c3 = () => {
                     rel="noopener noreferrer"
                   >
                     <item.icon
-                      className="mr-2 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
+                      className="mr-1.5 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
                       aria-hidden="true"
                     />
                     <span
