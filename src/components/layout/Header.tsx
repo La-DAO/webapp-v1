@@ -60,7 +60,7 @@ const Header = () => {
                 )}
                 <div className="hidden items-center md:flex">
                   <div className="flex-shrink-0">
-                    <Link href="/membresia">
+                    <Link href="/gm">
                       <button
                         type="button"
                         className="relative inline-flex items-center gap-x-1.5 rounded-md bg-ldPrimaryOrange-500 px-6 py-2 text-base font-medium text-white shadow-sm hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
