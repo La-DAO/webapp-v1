@@ -9,7 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        ldJetBlack: "#2e2e2c",
+        ldJetBlack: "#1A1A17",
+        ldAlmostWhite: "#FFFDF5",
+        ldBeigeWhite: "#f6f2e6",
+        ldDeepGreen: "#1F4038",
         ldPrimaryOrange: {
           100: "#f79d8b",
           200: "#f68c77",
@@ -33,6 +36,13 @@ export default {
       fontFamily: {
         spaceGrotesk: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
       },
+    },
+    listStyleType: {
+      none: "none",
+      disc: "disc",
+      decimal: "decimal",
+      square: "square",
+      roman: "upper-roman",
     },
   },
   plugins: [],
