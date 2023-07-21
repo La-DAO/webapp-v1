@@ -5,6 +5,7 @@ import Layout from "~/components/layout/Layout";
 import { WagmiConfig } from "wagmi";
 import { RainbowKitProvider, lightTheme } from "@rainbow-me/rainbowkit";
 import { chains, wagmiConfig } from "~/services/web3/wagmiClient";
+import { Toaster } from "react-hot-toast";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
@@ -18,6 +19,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           fontStack: "system",
         })}
       >
+        <Toaster />
         <Layout>
           <Component {...pageProps} />
         </Layout>

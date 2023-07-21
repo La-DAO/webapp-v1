@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useAccount, useDisconnect } from "wagmi";
 import { MinimalistConnectButton } from "~/components/web3/RainbowKitCustomConnectButton";
 import { useForm, type SubmitHandler } from "react-hook-form";
+import toast from "react-hot-toast";
+
+import { api } from "~/utils/api";
 
 type TContactForm = {
   address?: string;
@@ -12,17 +16,41 @@ const Gm = () => {
   const { disconnect } = useDisconnect();
   const { address } = useAccount();
 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const { data } = api.projects.getAll.useQuery();
+
+  console.log(data);
+
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<TContactForm>();
 
   const onSubmit: SubmitHandler<TContactForm> = (data) => {
-    console.log("holiiii");
+    setIsLoading(true);
     if (!address) return;
     data["address"] = address;
     console.log(data);
+    try {
+      setTimeout(() => {
+        console.log("success");
+        onSuccessHandler("Successful submission");
+      }, 3000);
+    } catch (error) {
+      onErrorHandler("Ocurrió un error");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const onSuccessHandler = (successMsg: string) => {
+    toast.success(successMsg);
+  };
+
+  const onErrorHandler = (errorMsg: string) => {
+    toast.error(errorMsg);
   };
 
   return (
@@ -94,7 +122,8 @@ const Gm = () => {
               ) : (
                 <button
                   type="submit"
-                  className="text-md w-2/3 rounded-md bg-ldPrimaryOrange-500 py-2 font-spaceGrotesk font-medium text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500 disabled:bg-gray-500 md:w-1/2 md:text-lg lg:w-3/5"
+                  className="text-md w-2/3 rounded-md bg-ldPrimaryOrange-500 py-2 font-spaceGrotesk font-medium text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500 disabled:bg-primary/50 md:w-1/2 md:text-lg lg:w-3/5"
+                  disabled={isLoading}
                 >
                   Enviar
                 </button>
