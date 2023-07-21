@@ -2,12 +2,27 @@ import { type AppType } from "next/app";
 import { api } from "~/utils/api";
 import "~/styles/globals.css";
 import Layout from "~/components/layout/Layout";
+import { WagmiConfig } from "wagmi";
+import { RainbowKitProvider, lightTheme } from "@rainbow-me/rainbowkit";
+import { chains, wagmiConfig } from "~/services/web3/wagmiClient";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <WagmiConfig config={wagmiConfig}>
+      <RainbowKitProvider
+        chains={chains}
+        theme={lightTheme({
+          accentColor: "#f25b3d",
+          accentColorForeground: "#f6f2e6",
+          borderRadius: "medium",
+          fontStack: "system",
+        })}
+      >
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </RainbowKitProvider>
+    </WagmiConfig>
   );
 };
 
