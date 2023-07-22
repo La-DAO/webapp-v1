@@ -5,9 +5,8 @@ import { MinimalistConnectButton } from "~/components/web3/RainbowKitCustomConne
 import { useForm, type SubmitHandler } from "react-hook-form";
 import toast from "react-hot-toast";
 import Link from "next/link";
-
-import { api } from "~/utils/api";
 import SimpleLoader from "~/components/common/SimpleLoader";
+import { api } from "~/utils/api";
 
 type TSvgProps = ComponentPropsWithoutRef<"svg">;
 
@@ -95,7 +94,6 @@ const Gm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
 
-  const { data } = api.projects.getAll.useQuery();
   const { mutate, isLoading: isSubmitting } =
     api.waitlists.createWaitlistApplication.useMutation({
       onSuccess: () => {
@@ -147,16 +145,16 @@ const Gm = () => {
         </div>
         <div className="lg:mt-4 lg:flex lg:gap-x-4 xl:gap-x-16">
           {isSubmitSuccess ? (
-            <div className="my-8 flex w-full flex-col gap-y-4 px-2 md:my-4 lg:mb-8 lg:mt-12 lg:w-1/2 lg:justify-center lg:gap-y-6 lg:px-8 xl:mt-8">
+            <div className="my-8 flex w-full flex-col gap-y-2 px-2 md:my-4 md:gap-y-4 lg:mb-8 lg:mt-12 lg:w-1/2 lg:justify-center lg:px-8 xl:mt-8 xl:gap-y-6">
               <h3 className="">¡Gracias por aplicar!</h3>
-              <p className="md:text-lg">
+              <p className="text-lg">
                 Recibirás un correo confirmando tu solicitud.
               </p>
-              <p className="md:text-lg">
+              <p className="text-lg">
                 Te informaremos cuando la membresía esté lista para acuñar.
                 Conecta con nosotros:
               </p>
-              <div className="flex w-full flex-wrap justify-center gap-x-4 gap-y-2">
+              <div className="my-6 flex w-full flex-wrap justify-center gap-x-4 gap-y-2 md:px-4 lg:my-0">
                 {SocialMediaNav.map((item) => (
                   <Link
                     key={item.name}
@@ -250,7 +248,7 @@ const Gm = () => {
                     className="text-md flex w-2/3 items-center justify-center gap-x-2 rounded-md bg-ldPrimaryOrange-500 py-2 font-spaceGrotesk font-medium text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500 disabled:bg-primary/50 md:w-1/2 md:text-lg lg:w-3/5"
                     disabled={isLoading || isSubmitting}
                   >
-                    {isLoading || isSubmitting ? "Enviando" : "Enviar"}
+                    {isLoading || isSubmitting ? "Enviando..." : "Enviar"}
                     {(isLoading || isSubmitting) && <SimpleLoader />}
                   </button>
                 )}

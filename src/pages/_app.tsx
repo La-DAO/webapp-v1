@@ -19,7 +19,12 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           fontStack: "system",
         })}
       >
-        <Toaster />
+        <Toaster
+          containerClassName="flex justify-center"
+          toastOptions={{
+            className: "border-2 border-primary shadow-none text-center",
+          }}
+        />
         <Layout>
           <Component {...pageProps} />
         </Layout>
