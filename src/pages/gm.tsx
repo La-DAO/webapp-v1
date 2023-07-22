@@ -56,7 +56,7 @@ const SocialMediaNav = [
   },
   {
     name: "Lens",
-    href: "https://lensfrens.com/ladao",
+    href: "https://lensfrens.xyz/ladao.lens",
     icon: () => (
       <svg
         className="mr-1 flex h-5 w-5 items-center justify-center rounded-md bg-primary pl-[2px] pt-[1.5px] hover:bg-ldPrimaryOrange-700 hover:text-ldPrimaryOrange-600"
@@ -99,7 +99,7 @@ const Gm = () => {
       onSuccess: () => {
         setIsSubmitSuccess(true);
         setIsLoading(false);
-        onSuccessHandler("Successful submission");
+        onSuccessHandler("¡Tu solicitud fue registrada exitosamente!");
       },
       onError: (error) => {
         console.log(error);
@@ -145,16 +145,13 @@ const Gm = () => {
         </div>
         <div className="lg:mt-4 lg:flex lg:gap-x-4 xl:gap-x-16">
           {isSubmitSuccess ? (
-            <div className="my-8 flex w-full flex-col gap-y-2 px-2 md:my-4 md:gap-y-4 lg:mb-8 lg:mt-12 lg:w-1/2 lg:justify-center lg:px-8 xl:mt-8 xl:gap-y-6">
+            <div className="my-8 flex w-full flex-col gap-y-6 px-2 md:my-4 lg:mb-8 lg:mt-12 lg:w-1/2 lg:justify-center lg:px-8 xl:mt-8">
               <h3 className="">¡Gracias por aplicar!</h3>
               <p className="text-lg">
-                Recibirás un correo confirmando tu solicitud.
-              </p>
-              <p className="text-lg">
                 Te informaremos cuando la membresía esté lista para acuñar.
-                Conecta con nosotros:
               </p>
-              <div className="my-6 flex w-full flex-wrap justify-center gap-x-4 gap-y-2 md:px-4 lg:my-0">
+              <p className="text-lg">Conecta con nosotros:</p>
+              <div className="flex w-full flex-wrap justify-center gap-x-4 gap-y-2 md:px-4 lg:my-0">
                 {SocialMediaNav.map((item) => (
                   <Link
                     key={item.name}
@@ -188,7 +185,7 @@ const Gm = () => {
             </div>
           ) : (
             <form
-              className="my-8 flex w-full flex-col gap-y-2 px-2 md:my-4 md:gap-y-4 lg:mb-8 lg:mt-12 lg:w-1/2 lg:justify-center lg:px-8 xl:mt-8"
+              className="my-8 flex w-full flex-col gap-y-6 px-2 md:my-4 md:gap-y-4 lg:mb-8 lg:mt-12 lg:w-1/2 lg:justify-center lg:px-8 xl:mt-8"
               onSubmit={(event) => {
                 const onSubmitFunction = handleSubmit(onSubmit);
                 void onSubmitFunction(event);
@@ -212,7 +209,7 @@ const Gm = () => {
               <div className="flex flex-col gap-y-2 text-left md:gap-y-4">
                 <div>
                   <label htmlFor="Name" className="mb-1 ml-2 font-semibold">
-                    Dirección Cartera
+                    Dirección cartera
                   </label>
                   <input
                     type="text"
@@ -275,10 +272,13 @@ const Gm = () => {
                 <div className="px-2 py-4 md:px-4">
                   <ul className="list-square text-left text-lg marker:text-ldPrimaryOrange-400">
                     <li className="my-3 ml-8 decoration-primary">
-                      Forma parte de La DAO Club
+                      Invitación a versión alfa de <br />
+                      <span className="text-center font-bold text-primary">
+                        La Cartera
+                      </span>
                     </li>
                     <li className="my-3 ml-8 decoration-primary">
-                      Acceso anticipado a funciones y proyectos nuevos
+                      Acceso anticipado a nuevos proyectos
                     </li>
                     <li className="my-3 ml-8 decoration-primary">
                       Análisis y Estrategias DeFi
