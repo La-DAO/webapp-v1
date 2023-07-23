@@ -2,7 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -11,10 +11,60 @@ datasource db {
 }
 
 model User {
-    id              String      @id @default(cuid())
-    role            String
-    email           String      @unique
-    ethAddress      String      @unique
-    createdAt       DateTime    @default(now())
-    updatedAt       DateTime    @updatedAt
+  id                          String          @id @default(cuid())
+  email                       String          @unique
+  ethAddress                  String          @unique
+  bannerUrl                   String?
+  profileUrl                  String?
+  role                        String
+  url                         String?
+  projects                    Project[]
+  socialMediaLinks            SocialMediaLink[]
+  waitlistApplications        WaitlistApplication[]
+  createdAt                   DateTime        @default(now())
+  updatedAt                   DateTime        @updatedAt
+}
+
+model Project {
+  id                          String          @id @default(cuid())
+  email                       String          @unique
+  name                        String
+  description                 String
+  isValidated                 Boolean         @default(false)
+  tags                        String[]
+  url                         String?
+  urlBanner                   String?
+  urlProfile                  String?
+  User                        User?           @relation(fields: [userId], references: [id])
+  userId                      String?
+  applications                WaitlistApplication[]
+  socialMediaLinks            SocialMediaLink[]
+  createdAt                   DateTime        @default(now())
+  updatedAt                   DateTime        @updatedAt
+
+  @@index([userId])
+}
+
+model WaitlistApplication {
+  id                          String          @id @default(cuid())
+  applicantEmail              String
+  applicantEthAddress         String
+  User                        User?           @relation(fields: [userId], references: [id])
+  userId                      String?
+  Project                     Project         @relation(fields: [projectId], references: [id])
+  projectId                   String
+  createdAt                   DateTime        @default(now())
+  updatedAt                   DateTime        @updatedAt
+
+  @@index([projectId, userId, applicantEmail, applicantEthAddress])
+}
+
+model SocialMediaLink {
+  id                          String          @id @default(cuid())
+  platformName                String
+  url                         String
+  User                        User?           @relation(fields: [userId], references: [id])
+  userId                      String
+  Project                     Project?         @relation(fields: [projectId], references: [id])
+  projectId                   String
 }

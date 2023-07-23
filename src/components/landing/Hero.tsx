@@ -27,7 +27,7 @@ const Hero = () => {
           digital y las comunidades
         </h3>
         <div className="mt-8 flex justify-center">
-          <Link href="/membresia">
+          <Link href="/gm">
             <button
               type="button"
               className="rounded-md bg-ldPrimaryOrange-500 px-8 py-3 text-xl font-semibold text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"

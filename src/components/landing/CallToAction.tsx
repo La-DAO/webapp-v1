@@ -17,7 +17,7 @@ const CallToAction = () => {
           </h2>
         </div>
         <div className="mt-10 flex items-center justify-start gap-x-6 md:mt-0 md:flex-shrink-0">
-          <Link href="/membresia">
+          <Link href="/gm">
             <button
               type="button"
               className="ml-4 rounded-md bg-ldPrimaryOrange-500 px-8 py-3 text-xl font-semibold text-white hover:bg-ldPrimaryOrange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ldPrimaryOrange-500"
