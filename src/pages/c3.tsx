@@ -119,7 +119,7 @@ const C3 = () => {
   const [mobilePageTitle, setMobilePageTitle] = useState(TABS[0]?.text);
 
   return (
-    <div className="flex min-h-[calc(100vh-64px)] w-full flex-wrap bg-ldBeigeWhite md:flex-nowrap">
+    <div className="flex min-h-[calc(100vh-64px)] w-full flex-wrap bg-ldBeigeWhite lg:flex-nowrap">
       <Tab.Group
         onChange={(index) => {
           console.log("Changed selected tab to:", index);
@@ -128,24 +128,24 @@ const C3 = () => {
       >
         <Tab.List
           as="div"
-          className="grid w-full grid-cols-2 grid-rows-4 bg-ldBeigeWhite px-10 pt-16 font-spaceGrotesk md:flex md:h-[calc(100vh-64px)] md:w-1/3 md:flex-col md:items-center md:gap-y-4 md:bg-ldJetBlack md:px-0 md:pt-32 md:text-ldBeigeWhite"
+          className="grid w-full grid-cols-2 grid-rows-4 bg-ldBeigeWhite px-10 pt-16 font-spaceGrotesk md:px-40 lg:flex lg:h-[calc(100vh-64px)] lg:w-1/4 lg:flex-col lg:items-center lg:gap-y-4 lg:bg-ldJetBlack lg:px-0 lg:pt-32 lg:text-ldBeigeWhite xl:w-1/5"
         >
-          <h1 className="col-span-2 row-span-2 mb-4 text-center text-4xl font-bold leading-tight tracking-tight text-primary md:hidden">
+          <h1 className="col-span-2 row-span-2 mb-4 text-center text-4xl font-bold leading-tight tracking-tight text-primary lg:hidden">
             {mobilePageTitle}
           </h1>
           {TABS.map((tab, index) => (
             <Tab
               as="div"
               key={`${tab.text}_tab_${index}`}
-              className="flex w-full justify-center outline-none md:first:my-6"
+              className="flex w-full justify-center outline-none lg:first:my-6"
             >
               {({ selected }) => (
                 <button
                   className={`${
                     selected
                       ? "bg-primary text-ldBeigeWhite"
-                      : "text-ldJetBlack hover:bg-ldPrimaryOrange-500/25 md:text-ldBeigeWhite"
-                  } w-3/4 rounded-md font-medium md:w-1/2 md:py-2 md:text-2xl`}
+                      : "text-ldJetBlack hover:bg-ldPrimaryOrange-500/25 lg:text-ldBeigeWhite"
+                  } w-4/5 rounded-md text-lg font-medium md:w-2/3 lg:w-1/2 lg:py-2 lg:text-2xl xl:w-2/3`}
                 >
                   {tab.text}
                 </button>
@@ -153,13 +153,18 @@ const C3 = () => {
             </Tab>
           ))}
         </Tab.List>
-        <div className="h-[calc(100vh-64px)] w-full overflow-y-scroll bg-ldBeigeWhite md:w-2/3 md:pt-16">
+        <div className="flex w-full justify-center bg-ldBeigeWhite lg:h-[calc(100vh-64px)] lg:w-3/4 lg:overflow-y-scroll lg:pt-16 xl:w-4/5">
           <Tab.Panels
             as="div"
-            className="max-w-7xl px-6 md:max-w-2xl lg:max-w-5xl lg:px-16 xl:px-24"
+            className="max-w-7xl px-6 md:px-12 lg:max-w-5xl lg:px-16 xl:px-24"
           >
-            <Tab.Panel as="div" className="flex flex-col items-center">
-              <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary md:block">
+            <Tab.Panel as="div">
+              <Conecta
+                communityLinks={COMMUNITY_LINKS}
+                directContact={DIRECT_CONTACT}
+                socialLinks={SOCIAL_LINKS}
+              />
+              {/* <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary lg:block">
                 C3
               </h1>
               <h4 className="mb-4 text-xl">
@@ -181,17 +186,22 @@ const C3 = () => {
                 quasi accusantium quas, eos aliquid labore! Est nostrum optio
                 quo voluptatum ab consectetur ducimus, assumenda, quos libero
                 facere deleniti! Quisquam, earum?
-              </p>
+              </p> */}
             </Tab.Panel>
-            <Tab.Panel as="div" className="overflow-y-scroll">
+            <Tab.Panel as="div">
               <Conecta
                 communityLinks={COMMUNITY_LINKS}
                 directContact={DIRECT_CONTACT}
                 socialLinks={SOCIAL_LINKS}
               />
             </Tab.Panel>
-            <Tab.Panel as="div" className="text-center">
-              <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary md:block">
+            <Tab.Panel as="div">
+              <Conecta
+                communityLinks={COMMUNITY_LINKS}
+                directContact={DIRECT_CONTACT}
+                socialLinks={SOCIAL_LINKS}
+              />
+              {/* <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary md:block">
                 Contribuye
               </h1>
               <p className="text-lg">
@@ -211,10 +221,15 @@ const C3 = () => {
                 quasi accusantium quas, eos aliquid labore! Est nostrum optio
                 quo voluptatum ab consectetur ducimus, assumenda, quos libero
                 facere deleniti! Quisquam, earum?
-              </p>
+              </p> */}
             </Tab.Panel>
-            <Tab.Panel as="div" className="text-center">
-              <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary md:block">
+            <Tab.Panel as="div">
+              <Conecta
+                communityLinks={COMMUNITY_LINKS}
+                directContact={DIRECT_CONTACT}
+                socialLinks={SOCIAL_LINKS}
+              />
+              {/* <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary md:block">
                 Construye
               </h1>
               <p className="text-lg">
@@ -234,7 +249,7 @@ const C3 = () => {
                 quasi accusantium quas, eos aliquid labore! Est nostrum optio
                 quo voluptatum ab consectetur ducimus, assumenda, quos libero
                 facere deleniti! Quisquam, earum?
-              </p>
+              </p> */}
             </Tab.Panel>
           </Tab.Panels>
         </div>
