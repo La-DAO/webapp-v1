@@ -1,5 +1,5 @@
 import { Tab } from "@headlessui/react";
-import { useState, type ComponentPropsWithoutRef, Fragment } from "react";
+import { useState, type ComponentPropsWithoutRef } from "react";
 import Conecta from "~/components/c3/Conecta";
 
 type TSvgProps = ComponentPropsWithoutRef<"svg">;
@@ -145,7 +145,7 @@ const C3 = () => {
                     selected
                       ? "bg-primary text-ldBeigeWhite"
                       : "text-ldJetBlack hover:bg-ldPrimaryOrange-500/25 lg:text-ldBeigeWhite"
-                  } w-4/5 rounded-md text-lg font-medium md:w-2/3 lg:w-1/2 lg:py-2 lg:text-2xl xl:w-2/3`}
+                  } w-4/5 rounded-md text-lg font-medium md:w-2/3 lg:py-2 lg:text-2xl xl:w-2/3`}
                 >
                   {tab.text}
                 </button>
@@ -156,7 +156,7 @@ const C3 = () => {
         <div className="flex w-full justify-center bg-ldBeigeWhite lg:h-[calc(100vh-64px)] lg:w-3/4 lg:overflow-y-scroll lg:pt-16 xl:w-4/5">
           <Tab.Panels
             as="div"
-            className="max-w-7xl px-6 md:px-12 lg:max-w-5xl lg:px-16 xl:px-24"
+            className="max-w-full px-6 md:px-12 lg:max-w-5xl lg:px-16 xl:px-24"
           >
             <Tab.Panel as="div">
               <Conecta

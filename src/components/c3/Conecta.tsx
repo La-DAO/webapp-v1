@@ -28,7 +28,7 @@ const Conecta = ({
   socialLinks,
 }: TConectaProps) => {
   return (
-    <div className="flex flex-col gap-y-12 py-8 text-center md:px-32 lg:gap-y-8 lg:px-16 xl:px-32">
+    <div className="flex flex-col gap-y-12 py-8 text-center md:px-32 md:pb-16 lg:gap-y-8 lg:px-16 xl:px-32">
       <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary lg:mb-0 lg:block">
         Conecta
       </h1>
