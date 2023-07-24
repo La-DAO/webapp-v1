@@ -1,6 +1,6 @@
 import { Tab } from "@headlessui/react";
-import { type ComponentPropsWithoutRef } from "react";
-import Link from "next/link";
+import { useState, type ComponentPropsWithoutRef, Fragment } from "react";
+import Conecta from "~/components/c3/Conecta";
 
 type TSvgProps = ComponentPropsWithoutRef<"svg">;
 
@@ -13,7 +13,7 @@ const TABS = [
 
 const COMMUNITY_LINKS = [
   {
-    name: "Discord",
+    text: "Discord",
     href: "https://discord.gg/tQXDnJrxX3",
     icon: ({ ...props }: TSvgProps) => (
       <svg viewBox="0 0 640 512" fill="currentColor" {...props}>
@@ -22,7 +22,7 @@ const COMMUNITY_LINKS = [
     ),
   },
   {
-    name: "Telegram",
+    text: "Telegram",
     href: "https://t.me/+ecIF8k2pUSgwMjQx",
     icon: ({ ...props }: TSvgProps) => (
       <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -30,8 +30,24 @@ const COMMUNITY_LINKS = [
       </svg>
     ),
   },
+];
+
+const DIRECT_CONTACT = [
   {
-    name: "gm@ladao.club",
+    text: "Llamada Semanal",
+    href: "https://discord.gg/dByXjbpT?event=1132745661046075435",
+    icon: ({ ...props }: TSvgProps) => (
+      <svg
+        fill="currentColor"
+        viewBox="0 0 16 16"
+        className="mr-2 h-5 w-6 text-primary"
+      >
+        <path d="M4 .5a.5.5 0 00-1 0V1H2a2 2 0 00-2 2v1h16V3a2 2 0 00-2-2h-1V.5a.5.5 0 00-1 0V1H4V.5zM16 14V5H0v9a2 2 0 002 2h12a2 2 0 002-2zm-3.5-7h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5z" />
+      </svg>
+    ),
+  },
+  {
+    text: "gm@ladao.club",
     href: "https://lensfrens.com/ladao",
     icon: ({ ...props }: TSvgProps) => (
       <svg
@@ -49,7 +65,7 @@ const COMMUNITY_LINKS = [
 
 const SOCIAL_LINKS = [
   {
-    name: "Twitter",
+    text: "Twitter",
     href: "https://twitter.com/LaDAO_Club",
     icon: ({ ...props }: TSvgProps) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -58,7 +74,7 @@ const SOCIAL_LINKS = [
     ),
   },
   {
-    name: "Instagram",
+    text: "Instagram",
     href: "https://www.instagram.com/ladao_club/",
     icon: ({ ...props }: TSvgProps) => (
       <svg viewBox="0 0 1024 1024" fill="currentColor" {...props}>
@@ -67,7 +83,7 @@ const SOCIAL_LINKS = [
     ),
   },
   {
-    name: "Lens",
+    text: "Lens",
     href: "https://lensfrens.com/ladao",
     icon: () => (
       <svg
@@ -78,14 +94,14 @@ const SOCIAL_LINKS = [
         <mask id="a" maskUnits="userSpaceOnUse" x="0" y="0">
           <path fill="#fff" d="M0 0h16v16H0z" />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M7.73 10.01a8.97 8.97 0 0 1-5.82-2.76 2.57 2.57 0 0 1-.72-1.97c.04-.63.33-1.24.8-1.72a2.64 2.64 0 0 1 1.66-.81 2.4 2.4 0 0 1 1.79.62c.05-.7.34-1.3.82-1.73A2.62 2.62 0 0 1 8.01 1c.66 0 1.28.23 1.74.64.49.43.78 1.03.83 1.73a2.38 2.38 0 0 1 1.78-.62 2.77 2.77 0 0 1 2.47 2.53c.05.72-.2 1.4-.72 1.97l-.16.16a8.97 8.97 0 0 1-5.7 2.6v.13c.03 1.17.53 2.03 1.4 2.44.89.41 2 .26 2.82-.34l.3.43c-.59.44-1.3.67-2.03.67a3.1 3.1 0 0 1-1.24-.25 4.59 4.59 0 0 0 5.26.9l.23.49a5.1 5.1 0 0 1-6.28-1.5 4.83 4.83 0 0 1-.46-.74v2.74h-.52v-2.75A5.13 5.13 0 0 1 1 14.47l.22-.47a4.6 4.6 0 0 0 5.26-.9 3.46 3.46 0 0 1-3.27-.42l.3-.44c.82.6 1.94.75 2.82.34.88-.4 1.37-1.27 1.4-2.45v-.12ZM2.35 3.94c.38-.39.91-.66 1.48-.66.46 0 .94.17 1.38.6a7.36 7.36 0 0 1 .26.27l.5.53-.03-.73v-.38a2 2 0 0 1 2.07-2.04 2 2 0 0 1 2.06 2.04v.21a2.96 2.96 0 0 1 0 .17l-.02.73.5-.53a5.34 5.34 0 0 1 .26-.27c.99-.96 2.18-.64 2.86.06.68.7 1 1.92.06 2.94l-.15.15A8.58 8.58 0 0 1 8.01 9.5a8.55 8.55 0 0 1-5.72-2.61c-.94-1.02-.63-2.23.06-2.94Z"
           />
         </mask>
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M7.73 10.01a8.97 8.97 0 0 1-5.82-2.76 2.57 2.57 0 0 1-.72-1.97c.04-.63.33-1.24.8-1.72a2.64 2.64 0 0 1 1.66-.81 2.4 2.4 0 0 1 1.79.62c.05-.7.34-1.3.82-1.73A2.62 2.62 0 0 1 8.01 1c.66 0 1.28.23 1.74.64.49.43.78 1.03.83 1.73a2.38 2.38 0 0 1 1.78-.62 2.77 2.77 0 0 1 2.47 2.53c.05.72-.2 1.4-.72 1.97l-.16.16a8.97 8.97 0 0 1-5.7 2.6v.13c.03 1.17.53 2.03 1.4 2.44.89.41 2 .26 2.82-.34l.3.43c-.59.44-1.3.67-2.03.67a3.1 3.1 0 0 1-1.24-.25 4.59 4.59 0 0 0 5.26.9l.23.49a5.1 5.1 0 0 1-6.28-1.5 4.83 4.83 0 0 1-.46-.74v2.74h-.52v-2.75A5.13 5.13 0 0 1 1 14.47l.22-.47a4.6 4.6 0 0 0 5.26-.9 3.46 3.46 0 0 1-3.27-.42l.3-.44c.82.6 1.94.75 2.82.34.88-.4 1.37-1.27 1.4-2.45v-.12ZM2.35 3.94c.38-.39.91-.66 1.48-.66.46 0 .94.17 1.38.6a7.36 7.36 0 0 1 .26.27l.5.53-.03-.73v-.38a2 2 0 0 1 2.07-2.04 2 2 0 0 1 2.06 2.04v.21a2.96 2.96 0 0 1 0 .17l-.02.73.5-.53a5.34 5.34 0 0 1 .26-.27c.99-.96 2.18-.64 2.86.06.68.7 1 1.92.06 2.94l-.15.15A8.58 8.58 0 0 1 8.01 9.5a8.55 8.55 0 0 1-5.72-2.61c-.94-1.02-.63-2.23.06-2.94Z"
           fill="#fff"
         />
@@ -99,27 +115,37 @@ const SOCIAL_LINKS = [
   },
 ];
 
-const c3 = () => {
+const C3 = () => {
+  const [mobilePageTitle, setMobilePageTitle] = useState(TABS[0]?.text);
+
   return (
-    <div className="flex min-h-[calc(100vh-64px)] w-full">
-      <Tab.Group>
+    <div className="flex min-h-[calc(100vh-64px)] w-full flex-wrap bg-ldBeigeWhite md:flex-nowrap">
+      <Tab.Group
+        onChange={(index) => {
+          console.log("Changed selected tab to:", index);
+          setMobilePageTitle(TABS[index]?.text);
+        }}
+      >
         <Tab.List
           as="div"
-          className="flex h-full w-1/3 flex-col items-center gap-y-4 bg-ldJetBlack pt-32 font-spaceGrotesk text-ldBeigeWhite"
+          className="grid w-full grid-cols-2 grid-rows-4 bg-ldBeigeWhite px-10 pt-16 font-spaceGrotesk md:flex md:h-[calc(100vh-64px)] md:w-1/3 md:flex-col md:items-center md:gap-y-4 md:bg-ldJetBlack md:px-0 md:pt-32 md:text-ldBeigeWhite"
         >
+          <h1 className="col-span-2 row-span-2 mb-4 text-center text-4xl font-bold leading-tight tracking-tight text-primary md:hidden">
+            {mobilePageTitle}
+          </h1>
           {TABS.map((tab, index) => (
             <Tab
               as="div"
               key={`${tab.text}_tab_${index}`}
-              className="flex w-full justify-center outline-none first:my-6"
+              className="flex w-full justify-center outline-none md:first:my-6"
             >
               {({ selected }) => (
                 <button
                   className={`${
                     selected
-                      ? "bg-primary"
-                      : "text-ldBeigeWhite hover:bg-ldPrimaryOrange-500/25"
-                  } w-1/2 rounded-md py-2 text-2xl font-medium`}
+                      ? "bg-primary text-ldBeigeWhite"
+                      : "text-ldJetBlack hover:bg-ldPrimaryOrange-500/25 md:text-ldBeigeWhite"
+                  } w-3/4 rounded-md font-medium md:w-1/2 md:py-2 md:text-2xl`}
                 >
                   {tab.text}
                 </button>
@@ -127,13 +153,13 @@ const c3 = () => {
             </Tab>
           ))}
         </Tab.List>
-        <div className="min-h-full w-2/3 overflow-y-scroll bg-ldBeigeWhite pt-16">
+        <div className="h-[calc(100vh-64px)] w-full overflow-y-scroll bg-ldBeigeWhite md:w-2/3 md:pt-16">
           <Tab.Panels
             as="div"
-            className="mx-auto max-w-7xl px-6 md:max-w-2xl lg:max-w-5xl lg:px-16 xl:px-24"
+            className="max-w-7xl px-6 md:max-w-2xl lg:max-w-5xl lg:px-16 xl:px-24"
           >
             <Tab.Panel as="div" className="flex flex-col items-center">
-              <h1 className="mb-8 text-center text-4xl font-bold leading-tight tracking-tight text-primary">
+              <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary md:block">
                 C3
               </h1>
               <h4 className="mb-4 text-xl">
@@ -150,73 +176,22 @@ const c3 = () => {
                   positivo en nuestras vidas.
                 </p>
               </div>
-            </Tab.Panel>
-            <Tab.Panel as="div" className="flex flex-col">
-              <h1 className="mb-8 text-center text-4xl font-bold leading-tight tracking-tight text-primary">
-                Conecta
-              </h1>
-              <h4 className="mb-4 text-xl">
-                El primer paso es unirte a nuestros canales: Telegram o Discord
-              </h4>
-              <p className="mb-4 px-4 text-base">
-                Estos los mejores lugares para hacer preguntas y empezar a
-                conocer a nuestros miembros, proyectos y forma de trabajar.
+              <p className="text-lg">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+                quasi accusantium quas, eos aliquid labore! Est nostrum optio
+                quo voluptatum ab consectetur ducimus, assumenda, quos libero
+                facere deleniti! Quisquam, earum?
               </p>
-              <div className="flex justify-center gap-x-8 px-12">
-                {COMMUNITY_LINKS.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center text-lg text-ldJetBlack"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <item.icon
-                      className="mr-1.5 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
-                      aria-hidden="true"
-                    />
-                    <span
-                      className="relative decoration-primary before:absolute before:-bottom-1 before:left-0 before:block before:h-[2px] 
-          before:w-full before:origin-top-left before:scale-x-0
-          before:bg-primary before:transition before:duration-300
-          before:ease-in-out before:content-[''] before:hover:scale-x-100"
-                    >
-                      {item.name}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-              <h4 className="mb-4 mt-8 text-xl">
-                Interactúa con nuestras redes sociales
-              </h4>
-
-              <div className="flex justify-center gap-x-8 px-12">
-                {SOCIAL_LINKS.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center text-lg text-ldJetBlack"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <item.icon
-                      className="mr-1.5 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
-                      aria-hidden="true"
-                    />
-                    <span
-                      className="relative decoration-primary before:absolute before:-bottom-1 before:left-0 before:block before:h-[2px] 
-          before:w-full before:origin-top-left before:scale-x-0
-          before:bg-primary before:transition before:duration-300
-          before:ease-in-out before:content-[''] before:hover:scale-x-100"
-                    >
-                      {item.name}
-                    </span>
-                  </Link>
-                ))}
-              </div>
+            </Tab.Panel>
+            <Tab.Panel as="div" className="overflow-y-scroll">
+              <Conecta
+                communityLinks={COMMUNITY_LINKS}
+                directContact={DIRECT_CONTACT}
+                socialLinks={SOCIAL_LINKS}
+              />
             </Tab.Panel>
             <Tab.Panel as="div" className="text-center">
-              <h1 className="mb-8 text-center text-4xl font-bold leading-tight tracking-tight text-primary">
+              <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary md:block">
                 Contribuye
               </h1>
               <p className="text-lg">
@@ -225,11 +200,35 @@ const c3 = () => {
                 quo voluptatum ab consectetur ducimus, assumenda, quos libero
                 facere deleniti! Quisquam, earum?
               </p>
+              <p className="text-lg">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+                quasi accusantium quas, eos aliquid labore! Est nostrum optio
+                quo voluptatum ab consectetur ducimus, assumenda, quos libero
+                facere deleniti! Quisquam, earum?
+              </p>
+              <p className="text-lg">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+                quasi accusantium quas, eos aliquid labore! Est nostrum optio
+                quo voluptatum ab consectetur ducimus, assumenda, quos libero
+                facere deleniti! Quisquam, earum?
+              </p>
             </Tab.Panel>
             <Tab.Panel as="div" className="text-center">
-              <h1 className="mb-8 text-center text-4xl font-bold leading-tight tracking-tight text-primary">
+              <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary md:block">
                 Construye
               </h1>
+              <p className="text-lg">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+                quasi accusantium quas, eos aliquid labore! Est nostrum optio
+                quo voluptatum ab consectetur ducimus, assumenda, quos libero
+                facere deleniti! Quisquam, earum?
+              </p>
+              <p className="text-lg">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+                quasi accusantium quas, eos aliquid labore! Est nostrum optio
+                quo voluptatum ab consectetur ducimus, assumenda, quos libero
+                facere deleniti! Quisquam, earum?
+              </p>
               <p className="text-lg">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
                 quasi accusantium quas, eos aliquid labore! Est nostrum optio
@@ -244,4 +243,4 @@ const c3 = () => {
   );
 };
 
-export default c3;
+export default C3;
