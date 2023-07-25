@@ -1,6 +1,7 @@
 import { Tab } from "@headlessui/react";
 import { useState, type ComponentPropsWithoutRef } from "react";
 import Conecta from "~/components/c3/Conecta";
+import Framework from "~/components/c3/Framework";
 
 type TSvgProps = ComponentPropsWithoutRef<"svg">;
 
@@ -36,7 +37,7 @@ const DIRECT_CONTACT = [
   {
     text: "Llamada Semanal",
     href: "https://discord.gg/dByXjbpT?event=1132745661046075435",
-    icon: ({ ...props }: TSvgProps) => (
+    icon: () => (
       <svg
         fill="currentColor"
         viewBox="0 0 16 16"
@@ -159,11 +160,7 @@ const C3 = () => {
             className="max-w-full px-6 md:px-12 lg:max-w-5xl lg:px-16 xl:px-24"
           >
             <Tab.Panel as="div">
-              <Conecta
-                communityLinks={COMMUNITY_LINKS}
-                directContact={DIRECT_CONTACT}
-                socialLinks={SOCIAL_LINKS}
-              />
+              <Framework />
               {/* <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary lg:block">
                 C3
               </h1>

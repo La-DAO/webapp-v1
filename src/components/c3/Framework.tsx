@@ -1,24 +1,36 @@
-import Link from "next/link";
-import CardWithHeader from "../cards/CardWithHeader";
-import { type TIconLink } from "~/pages/types/c3";
+import Image from "next/image";
 
-export type TConectaProps = {
-  communityLinks: TIconLink[];
-  directContact: TIconLink[];
-  socialLinks: TIconLink[];
-};
-
-const Conecta = ({
-  communityLinks,
-  directContact,
-  socialLinks,
-}: TConectaProps) => {
+const Framework = () => {
   return (
-    <div className="flex flex-col gap-y-12 px-4 py-8 text-center md:px-32 md:pb-16 lg:gap-y-8 lg:px-16 lg:pt-0 xl:px-32">
-      <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary lg:mb-0 lg:block">
-        Conecta
+    <div className="flex flex-col gap-y-8 py-8 pb-12 text-center md:pb-16 lg:px-0 lg:pt-0 xl:px-8">
+      <h1 className="mb-8 hidden text-center leading-tight tracking-tight text-primary lg:mb-0 lg:block">
+        C3
       </h1>
-      <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col items-center gap-y-8 lg:flex-row lg:flex-wrap lg:items-start">
+        <div className="lg:w-full">
+          <h4 className="mb-2">
+            El Marco de Trabajo que implementamos en{" "}
+            <span className="font-extrabold text-primary">La DAO</span>.
+          </h4>
+          <h4>Basado en 3 pilares:</h4>
+          <h4>Conectar, Contribuir y Construir.</h4>
+        </div>
+        <p className="px-4 text-justify text-lg md:px-16 lg:w-1/2 lg:pl-4 lg:pr-6 lg:pt-16">
+          Fomentamos las interacciones entre las personas, comunidades y
+          proyectos, con el objetivo de generar un sentido de pertenencia y
+          responsabilidad, para generar un impacto positivo en nuestras vidas.
+        </p>
+        <div className="px-4 md:w-4/5 md:py-8 lg:w-1/2 lg:py-4 lg:pl-6">
+          <Image
+            src="/images/landing/hold-and-connect.jpeg"
+            alt="Juntos creamos un mundo nuevo"
+            className="h-auto w-full rounded-md"
+            width={300}
+            height={500}
+          />
+        </div>
+      </div>
+      {/* <div className="flex flex-col gap-y-4">
         <p className="text-lg">
           Si tienes ideas, quieres contribuir o aprender más, este es el mejor
           lugar para comenzar:
@@ -131,9 +143,9 @@ before:ease-in-out before:content-[''] before:hover:scale-x-100"
             </ul>
           </CardWithHeader>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default Conecta;
+export default Framework;
