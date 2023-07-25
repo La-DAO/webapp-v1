@@ -8,7 +8,7 @@ export type TConectaProps = {
   socialLinks: TIconLink[];
 };
 
-const Conecta = ({
+const Contribuye = ({
   communityLinks,
   directContact,
   socialLinks,
@@ -16,7 +16,7 @@ const Conecta = ({
   return (
     <div className="flex flex-col gap-y-12 px-4 py-8 text-center md:px-32 md:pb-16 lg:gap-y-8 lg:px-16 lg:pt-0 xl:px-32">
       <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary lg:mb-0 lg:block">
-        Conecta
+        Contribuye
       </h1>
       <div className="flex flex-col gap-y-4">
         <p className="text-lg">
@@ -31,8 +31,8 @@ const Conecta = ({
                   key={item.text}
                   href={item.href}
                   className="flex items-center justify-center text-xl text-ldJetBlack"
-                  target={item.isExternal ? "_blank" : ""}
-                  rel={item.isExternal ? "noopener noreferrer" : ""}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <item.icon
                     className="mr-1.5 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
@@ -67,8 +67,8 @@ before:ease-in-out before:content-[''] before:hover:scale-x-100"
                   key={item.text}
                   href={item.href}
                   className="flex items-center justify-center text-xl text-ldJetBlack"
-                  target={item.isExternal ? "_blank" : ""}
-                  rel={item.isExternal ? "noopener noreferrer" : ""}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <item.icon
                     className="mr-1.5 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
@@ -106,8 +106,8 @@ before:ease-in-out before:content-[''] before:hover:scale-x-100"
                   key={item.text}
                   href={item.href}
                   className="flex items-center justify-center text-xl text-ldJetBlack"
-                  target={item.isExternal ? "_blank" : ""}
-                  rel={item.isExternal ? "noopener noreferrer" : ""}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <item.icon
                     className="mr-1.5 h-6 w-6 text-primary hover:text-ldPrimaryOrange-600"
@@ -136,4 +136,4 @@ before:ease-in-out before:content-[''] before:hover:scale-x-100"
   );
 };
 
-export default Conecta;
+export default Contribuye;

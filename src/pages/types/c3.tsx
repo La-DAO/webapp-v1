@@ -6,4 +6,5 @@ export type TIconLink = {
   text: string;
   href: string;
   icon: ({ ...props }: TSvgProps) => React.JSX.Element;
+  isExternal: boolean;
 };
