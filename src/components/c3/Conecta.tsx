@@ -14,7 +14,7 @@ const Conecta = ({
   socialLinks,
 }: TConectaProps) => {
   return (
-    <div className="flex flex-col gap-y-12 px-4 py-8 text-center md:px-32 md:pb-16 lg:gap-y-8 lg:px-16 lg:pt-0 xl:px-32">
+    <div className="flex flex-col gap-y-12 px-4 pb-16 pt-8 text-center md:px-32 lg:gap-y-8 lg:px-16 lg:pt-0 xl:px-32">
       <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary lg:mb-0 lg:block">
         Conecta
       </h1>
@@ -30,7 +30,7 @@ const Conecta = ({
                 <Link
                   key={item.text}
                   href={item.href}
-                  className="flex items-center justify-center text-xl text-ldJetBlack"
+                  className="flex items-center justify-center font-sora text-lg text-ldJetBlack"
                   target={item.isExternal ? "_blank" : ""}
                   rel={item.isExternal ? "noopener noreferrer" : ""}
                 >
@@ -61,12 +61,12 @@ before:ease-in-out before:content-[''] before:hover:scale-x-100"
         <p className="text-lg">Síguenos para noticias, eventos y dinámicas:</p>
         <div className="md:px-8 lg:px-16">
           <CardWithHeader header="Interactúa con nosotros">
-            <div className="my-4 flex flex-wrap justify-center gap-x-8 gap-y-4 px-6">
+            <div className="my-4 flex flex-wrap justify-center gap-x-8 gap-y-4 px-2">
               {socialLinks.map((item) => (
                 <Link
                   key={item.text}
                   href={item.href}
-                  className="flex items-center justify-center text-xl text-ldJetBlack"
+                  className="flex items-center justify-center font-sora text-lg text-ldJetBlack"
                   target={item.isExternal ? "_blank" : ""}
                   rel={item.isExternal ? "noopener noreferrer" : ""}
                 >
@@ -105,7 +105,7 @@ before:ease-in-out before:content-[''] before:hover:scale-x-100"
                 <Link
                   key={item.text}
                   href={item.href}
-                  className="flex items-center justify-center text-xl text-ldJetBlack"
+                  className="flex items-center justify-center font-sora text-lg text-ldJetBlack"
                   target={item.isExternal ? "_blank" : ""}
                   rel={item.isExternal ? "noopener noreferrer" : ""}
                 >

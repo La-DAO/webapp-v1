@@ -35,6 +35,7 @@ export default {
       },
       fontFamily: {
         spaceGrotesk: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+        sora: ["Sora", ...defaultTheme.fontFamily.sans],
       },
     },
     listStyleType: {

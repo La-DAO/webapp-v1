@@ -124,6 +124,69 @@ const SOCIAL_LINKS = [
   },
 ];
 
+const PM_TOOLS_LINKS = [
+  {
+    text: "Tareas - Dework",
+    href: "https://app.dework.xyz/la-dao",
+    icon: ({ ...props }: TSvgProps) => (
+      <svg viewBox="0 0 1024 1024" fill="currentColor" {...props}>
+        <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM368 744c0 4.4-3.6 8-8 8h-80c-4.4 0-8-3.6-8-8V280c0-4.4 3.6-8 8-8h80c4.4 0 8 3.6 8 8v464zm192-280c0 4.4-3.6 8-8 8h-80c-4.4 0-8-3.6-8-8V280c0-4.4 3.6-8 8-8h80c4.4 0 8 3.6 8 8v184zm192 72c0 4.4-3.6 8-8 8h-80c-4.4 0-8-3.6-8-8V280c0-4.4 3.6-8 8-8h80c4.4 0 8 3.6 8 8v256z" />
+      </svg>
+    ),
+    isExternal: true,
+  },
+  {
+    text: "Código - Github",
+    href: "https://github.com/La-DAO",
+    icon: ({ ...props }: TSvgProps) => (
+      <svg viewBox="0 0 1024 1024" fill="currentColor" {...props}>
+        <path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z" />
+      </svg>
+    ),
+    isExternal: true,
+  },
+];
+
+const IDEAS_DUMP_LINKS = [
+  {
+    text: "Ideas - Discord",
+    href: "https://discord.gg/gpMm9zenRC",
+    icon: ({ ...props }: TSvgProps) => (
+      <svg viewBox="0 0 640 512" fill="currentColor" {...props}>
+        <path d="M524.531 69.836a1.5 1.5 0 00-.764-.7A485.065 485.065 0 00404.081 32.03a1.816 1.816 0 00-1.923.91 337.461 337.461 0 00-14.9 30.6 447.848 447.848 0 00-134.426 0 309.541 309.541 0 00-15.135-30.6 1.89 1.89 0 00-1.924-.91 483.689 483.689 0 00-119.688 37.107 1.712 1.712 0 00-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 00.765 1.375 487.666 487.666 0 00146.825 74.189 1.9 1.9 0 002.063-.676A348.2 348.2 0 00208.12 430.4a1.86 1.86 0 00-1.019-2.588 321.173 321.173 0 01-45.868-21.853 1.885 1.885 0 01-.185-3.126 251.047 251.047 0 009.109-7.137 1.819 1.819 0 011.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 011.924.233 234.533 234.533 0 009.132 7.16 1.884 1.884 0 01-.162 3.126 301.407 301.407 0 01-45.89 21.83 1.875 1.875 0 00-1 2.611 391.055 391.055 0 0030.014 48.815 1.864 1.864 0 002.063.7A486.048 486.048 0 00610.7 405.729a1.882 1.882 0 00.765-1.352c12.264-126.783-20.532-236.912-86.934-334.541zM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241z" />
+      </svg>
+    ),
+    isExternal: true,
+  },
+  {
+    text: "Notion - Repositorio",
+    href: "https://ladao.notion.site/La-DAO-b885b3165bc34000a9201f1b887165d9?pvs=4",
+    icon: ({ ...props }: TSvgProps) => (
+      <svg fill="none" viewBox="0 0 15 15" {...props}>
+        <path
+          fill="currentColor"
+          d="M3.258 3.117c.42.341.577.315 1.366.262l7.433-.446c.158 0 .027-.157-.026-.183l-1.235-.893c-.236-.184-.551-.394-1.155-.341l-7.198.525c-.262.026-.315.157-.21.262l1.025.814zm.446 1.732v7.821c0 .42.21.578.683.552l8.17-.473c.472-.026.525-.315.525-.656V4.324c0-.34-.131-.525-.42-.499l-8.538.499c-.315.026-.42.184-.42.525zm8.065.42c.052.236 0 .472-.237.499l-.394.078v5.774c-.341.184-.657.29-.92.29-.42 0-.525-.132-.84-.526L6.803 7.342v3.911l.815.184s0 .472-.657.472l-1.812.105c-.053-.105 0-.367.184-.42l.472-.13V6.292L5.15 6.24c-.053-.236.078-.577.446-.604l1.944-.13L10.22 9.6V5.978l-.683-.079c-.053-.289.157-.499.42-.525l1.813-.105zm-9.93-3.937L9.326.781c.919-.08 1.155-.026 1.733.394l2.39 1.68c.395.288.526.367.526.682v9.212c0 .578-.21.92-.946.971l-8.694.525c-.552.027-.815-.052-1.104-.42l-1.76-2.283c-.315-.42-.446-.735-.446-1.103V2.25c0-.472.21-.866.814-.918z"
+        />
+      </svg>
+    ),
+    isExternal: true,
+  },
+  {
+    text: "Llamada Semanal",
+    href: "https://discord.gg/dByXjbpT?event=1132745661046075435",
+    icon: () => (
+      <svg
+        fill="currentColor"
+        viewBox="0 0 16 16"
+        className="mr-2 h-5 w-6 text-primary"
+      >
+        <path d="M4 .5a.5.5 0 00-1 0V1H2a2 2 0 00-2 2v1h16V3a2 2 0 00-2-2h-1V.5a.5.5 0 00-1 0V1H4V.5zM16 14V5H0v9a2 2 0 002 2h12a2 2 0 002-2zm-3.5-7h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5z" />
+      </svg>
+    ),
+    isExternal: true,
+  },
+];
+
 const C3 = () => {
   const [mobilePageTitle, setMobilePageTitle] = useState(TABS[0]?.text);
 
@@ -169,29 +232,6 @@ const C3 = () => {
           >
             <Tab.Panel as="div">
               <Framework />
-              {/* <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary lg:block">
-                C3
-              </h1>
-              <h4 className="mb-4 text-xl">
-                El Marco de Trabajo que implementamos en La DAO.
-              </h4>
-              <h4 className="mb-4 text-xl">
-                Basado en 3 pilares: conectar, contribuir y construir.
-              </h4>
-              <div className="w-2/3">
-                <p className="text-justify text-lg">
-                  Fomentamos las interacciones entre las personas, comunidades y
-                  proyectos, con el objetivo de generar un sentido de
-                  pertenencia y responsabilidad, para generar un impacto
-                  positivo en nuestras vidas.
-                </p>
-              </div>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-                quasi accusantium quas, eos aliquid labore! Est nostrum optio
-                quo voluptatum ab consectetur ducimus, assumenda, quos libero
-                facere deleniti! Quisquam, earum?
-              </p> */}
             </Tab.Panel>
             <Tab.Panel as="div">
               <Conecta
@@ -202,31 +242,9 @@ const C3 = () => {
             </Tab.Panel>
             <Tab.Panel as="div">
               <Contribuye
-                communityLinks={COMMUNITY_LINKS}
-                directContact={DIRECT_CONTACT}
-                socialLinks={SOCIAL_LINKS}
+                pmToolsLinks={PM_TOOLS_LINKS}
+                ideasDumpLinks={IDEAS_DUMP_LINKS}
               />
-              {/* <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary md:block">
-                Contribuye
-              </h1>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-                quasi accusantium quas, eos aliquid labore! Est nostrum optio
-                quo voluptatum ab consectetur ducimus, assumenda, quos libero
-                facere deleniti! Quisquam, earum?
-              </p>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-                quasi accusantium quas, eos aliquid labore! Est nostrum optio
-                quo voluptatum ab consectetur ducimus, assumenda, quos libero
-                facere deleniti! Quisquam, earum?
-              </p>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-                quasi accusantium quas, eos aliquid labore! Est nostrum optio
-                quo voluptatum ab consectetur ducimus, assumenda, quos libero
-                facere deleniti! Quisquam, earum?
-              </p> */}
             </Tab.Panel>
             <Tab.Panel as="div">
               <Conecta
@@ -234,27 +252,6 @@ const C3 = () => {
                 directContact={DIRECT_CONTACT}
                 socialLinks={SOCIAL_LINKS}
               />
-              {/* <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary md:block">
-                Construye
-              </h1>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-                quasi accusantium quas, eos aliquid labore! Est nostrum optio
-                quo voluptatum ab consectetur ducimus, assumenda, quos libero
-                facere deleniti! Quisquam, earum?
-              </p>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-                quasi accusantium quas, eos aliquid labore! Est nostrum optio
-                quo voluptatum ab consectetur ducimus, assumenda, quos libero
-                facere deleniti! Quisquam, earum?
-              </p>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-                quasi accusantium quas, eos aliquid labore! Est nostrum optio
-                quo voluptatum ab consectetur ducimus, assumenda, quos libero
-                facere deleniti! Quisquam, earum?
-              </p> */}
             </Tab.Panel>
           </Tab.Panels>
         </div>
