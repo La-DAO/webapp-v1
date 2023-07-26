@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CardWithHeader from "../cards/CardWithHeader";
-import { type TIconLink } from "~/pages/types/c3";
+import { type TIconLink } from "~/types/pages/c3";
 
 export type TConectaProps = {
   communityLinks: TIconLink[];

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import CardWithHeader from "../cards/CardWithHeader";
-import { type TIconLink } from "~/pages/types/c3";
+import { type TIconLink } from "~/types/pages/c3";
 
-export type TConectaProps = {
+export type TContribuyeProps = {
   pmToolsLinks: TIconLink[];
   ideasDumpLinks: TIconLink[];
 };
 
-const Contribuye = ({ pmToolsLinks, ideasDumpLinks }: TConectaProps) => {
+const Contribuye = ({ pmToolsLinks, ideasDumpLinks }: TContribuyeProps) => {
   return (
     <div className="flex flex-col gap-y-12 px-4 pb-16 pt-8 text-center md:px-32 lg:gap-y-8 lg:px-16 lg:pt-0 xl:px-32">
       <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary lg:mb-0 lg:block">

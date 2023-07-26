@@ -188,7 +188,7 @@ const IDEAS_DUMP_LINKS = [
   },
 ];
 
-const executionLinks = [
+const EXECUTION_LINKS = [
   {
     text: "DAOHaus",
     href: "https://app.daohaus.club/dao/0x89/0xd3f99b1cba012d823c59e3d21bb35acd88e07c58",
@@ -292,10 +292,7 @@ const C3 = () => {
               />
             </Tab.Panel>
             <Tab.Panel as="div">
-              <Construye
-                pmToolsLinks={executionLinks}
-                ideasDumpLinks={executionLinks}
-              />
+              <Construye executionLinks={EXECUTION_LINKS} />
             </Tab.Panel>
           </Tab.Panels>
         </div>

@@ -1,13 +1,12 @@
 import Link from "next/link";
 import CardWithHeader from "../cards/CardWithHeader";
-import { type TIconLink } from "~/pages/types/c3";
+import { type TIconLink } from "~/types/pages/c3";
 
-export type TConectaProps = {
-  pmToolsLinks: TIconLink[];
-  ideasDumpLinks: TIconLink[];
+export type TConstruyeProps = {
+  executionLinks: TIconLink[];
 };
 
-const Construye = ({ pmToolsLinks, ideasDumpLinks }: TConectaProps) => {
+const Construye = ({ executionLinks }: TConstruyeProps) => {
   return (
     <div className="flex flex-col gap-y-12 pb-16 pt-8 text-center md:px-32 lg:gap-y-8 lg:px-16 lg:pt-0 xl:px-32">
       <h1 className="mb-8 hidden text-center text-4xl font-bold leading-tight tracking-tight text-primary lg:mb-0 lg:block">
@@ -29,7 +28,7 @@ const Construye = ({ pmToolsLinks, ideasDumpLinks }: TConectaProps) => {
           <CardWithHeader header="Proponer y ejecutar">
             <div className="my-4 flex w-full justify-center px-4">
               <div className="flex flex-col items-start gap-y-4 lg:gap-y-6">
-                {ideasDumpLinks.map((item) => (
+                {executionLinks.map((item) => (
                   <Link
                     key={item.text}
                     href={item.href}
