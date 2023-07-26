@@ -93,7 +93,7 @@ const SOCIAL_LINKS = [
   },
   {
     text: "Lens",
-    href: "https://lensfrens.com/ladao",
+    href: "https://lensfrens.xyz/ladao.lens",
     icon: () => (
       <svg
         className="mr-1.5 flex h-6 w-6 items-center justify-center rounded-md bg-primary pl-[4px] pt-[3.5px] hover:text-ldPrimaryOrange-600"
