@@ -31,7 +31,7 @@ const Contribuye = ({ pmToolsLinks, ideasDumpLinks }: TConectaProps) => {
                   rel="noopener noreferrer"
                 >
                   <item.icon
-                    className="mr-1.5 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
+                    className="mr-2 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
                     aria-hidden="true"
                   />
                   <span
@@ -73,7 +73,7 @@ before:ease-in-out before:content-[''] before:hover:scale-x-100"
                     rel="noopener noreferrer"
                   >
                     <item.icon
-                      className="mr-1.5 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
+                      className="mr-2 h-7 w-7 text-primary hover:text-ldPrimaryOrange-600"
                       aria-hidden="true"
                     />
                     <span

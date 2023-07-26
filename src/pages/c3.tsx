@@ -1,6 +1,7 @@
 import { Tab } from "@headlessui/react";
 import { useState, type ComponentPropsWithoutRef } from "react";
 import Conecta from "~/components/c3/Conecta";
+import Construye from "~/components/c3/Construye";
 import Contribuye from "~/components/c3/Contribuye";
 import Framework from "~/components/c3/Framework";
 
@@ -187,6 +188,50 @@ const IDEAS_DUMP_LINKS = [
   },
 ];
 
+const executionLinks = [
+  {
+    text: "DAOHaus",
+    href: "https://app.daohaus.club/dao/0x89/0xd3f99b1cba012d823c59e3d21bb35acd88e07c58",
+    icon: ({ ...props }: TSvgProps) => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        {...props}
+      >
+        <path d="M11.584 2.376a.75.75 0 01.832 0l9 6a.75.75 0 11-.832 1.248L12 3.901 3.416 9.624a.75.75 0 01-.832-1.248l9-6z" />
+        <path
+          fillRule="evenodd"
+          d="M20.25 10.332v9.918H21a.75.75 0 010 1.5H3a.75.75 0 010-1.5h.75v-9.918a.75.75 0 01.634-.74A49.109 49.109 0 0112 9c2.59 0 5.134.202 7.616.592a.75.75 0 01.634.74zm-7.5 2.418a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75zm3-.75a.75.75 0 01.75.75v6.75a.75.75 0 01-1.5 0v-6.75a.75.75 0 01.75-.75zM9 12.75a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75z"
+          clipRule="evenodd"
+        />
+        <path d="M12 7.875a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" />
+      </svg>
+    ),
+    isExternal: true,
+  },
+  {
+    text: "Seguimiento Proyectos",
+    href: "https://discord.gg/gpMm9zenRC",
+    icon: ({ ...props }: TSvgProps) => (
+      <svg viewBox="0 0 640 512" fill="currentColor" {...props}>
+        <path d="M524.531 69.836a1.5 1.5 0 00-.764-.7A485.065 485.065 0 00404.081 32.03a1.816 1.816 0 00-1.923.91 337.461 337.461 0 00-14.9 30.6 447.848 447.848 0 00-134.426 0 309.541 309.541 0 00-15.135-30.6 1.89 1.89 0 00-1.924-.91 483.689 483.689 0 00-119.688 37.107 1.712 1.712 0 00-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 00.765 1.375 487.666 487.666 0 00146.825 74.189 1.9 1.9 0 002.063-.676A348.2 348.2 0 00208.12 430.4a1.86 1.86 0 00-1.019-2.588 321.173 321.173 0 01-45.868-21.853 1.885 1.885 0 01-.185-3.126 251.047 251.047 0 009.109-7.137 1.819 1.819 0 011.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 011.924.233 234.533 234.533 0 009.132 7.16 1.884 1.884 0 01-.162 3.126 301.407 301.407 0 01-45.89 21.83 1.875 1.875 0 00-1 2.611 391.055 391.055 0 0030.014 48.815 1.864 1.864 0 002.063.7A486.048 486.048 0 00610.7 405.729a1.882 1.882 0 00.765-1.352c12.264-126.783-20.532-236.912-86.934-334.541zM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241z" />
+      </svg>
+    ),
+    isExternal: true,
+  },
+  {
+    text: "Recompensas - Dework",
+    href: "https://app.dework.xyz/la-dao",
+    icon: ({ ...props }: TSvgProps) => (
+      <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+        <path d="M19.965 8.521C19.988 8.347 20 8.173 20 8c0-2.379-2.143-4.288-4.521-3.965C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.035C6.138 3.712 4 5.621 4 8c0 .173.012.347.035.521C2.802 9.215 2 10.535 2 12s.802 2.785 2.035 3.479A3.976 3.976 0 004 16c0 2.379 2.138 4.283 4.521 3.965C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.035C17.857 20.283 20 18.379 20 16c0-.173-.012-.347-.035-.521C21.198 14.785 22 13.465 22 12s-.802-2.785-2.035-3.479zm-9.01 7.895l-3.667-3.714 1.424-1.404 2.257 2.286 4.327-4.294 1.408 1.42-5.749 5.706z" />
+      </svg>
+    ),
+    isExternal: true,
+  },
+];
+
 const C3 = () => {
   const [mobilePageTitle, setMobilePageTitle] = useState(TABS[0]?.text);
 
@@ -247,10 +292,9 @@ const C3 = () => {
               />
             </Tab.Panel>
             <Tab.Panel as="div">
-              <Conecta
-                communityLinks={COMMUNITY_LINKS}
-                directContact={DIRECT_CONTACT}
-                socialLinks={SOCIAL_LINKS}
+              <Construye
+                pmToolsLinks={executionLinks}
+                ideasDumpLinks={executionLinks}
               />
             </Tab.Panel>
           </Tab.Panels>
