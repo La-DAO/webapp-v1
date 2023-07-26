@@ -45,7 +45,6 @@ const Resources = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 };
