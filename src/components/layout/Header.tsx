@@ -30,11 +30,14 @@ const Header = () => {
           <div className="mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
               <div className="flex">
-                <Link className="flex flex-shrink-0 items-center" href="/">
-                  <LogoComponent />
-                  <span className="ml-2 text-xl font-medium text-white hover:text-primary">
-                    La DAO
-                  </span>
+                <Link
+                  className="flex flex-shrink-0 items-center text-ldBeigeWhite hover:text-primary"
+                  href="/"
+                >
+                  <div className="mb-0.5">
+                    <LogoComponent />
+                  </div>
+                  <span className="ml-2 text-xl font-medium">La DAO</span>
                 </Link>
               </div>
               <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
@@ -46,9 +49,9 @@ const Header = () => {
                         href={item.href}
                         className={classNames(
                           item.href === pathname
-                            ? "text-white underline decoration-ldPrimaryOrange-500 decoration-2 underline-offset-8"
-                            : "text-ldBeigeWhite hover:text-white",
-                          "rounded-md px-3 py-2 font-medium hover:bg-gray-700 hover:ring-1 hover:ring-inset hover:ring-primary md:text-base"
+                            ? "underline decoration-ldPrimaryOrange-500 decoration-2 underline-offset-8"
+                            : "hover:texft-white",
+                          "rounded-md px-3 py-2 font-medium text-ldBeigeWhite hover:bg-gray-700 hover:ring-1 hover:ring-inset hover:ring-primary md:text-base"
                         )}
                         aria-current={
                           item.href === pathname ? "page" : undefined
