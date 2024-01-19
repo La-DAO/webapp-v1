@@ -12,6 +12,7 @@ const TECHNICAL_DOCS_LINKS = [
     name: "Whitepaper Xocolatl",
     href: "/pdf/xocolatl_whitepaper_v0.1.pdf",
     isExternal: true,
+
     tags: ["whitepaper", "DeFi"],
   },
   {
