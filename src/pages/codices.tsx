@@ -2,16 +2,17 @@ import React from "react";
 import DocsCard from "~/components/cards/LinksListCard";
 
 const TECHNICAL_DOCS_LINKS = [
-  {
-    name: "Whitepaper La DAO",
-    href: "/whitepaper",
-    isExternal: false,
-    tags: ["whitepaper", "DAO", "Governance", "Tooling"],
-  },
+  // {
+  //   name: "Whitepaper La DAO",
+  //   href: "/whitepaper",
+  //   isExternal: false,
+  //   tags: ["whitepaper", "DAO", "Governance", "Tooling"],
+  // },
   {
     name: "Whitepaper Xocolatl",
-    href: "/proyectos/xocolatl/whitepaper",
-    isExternal: false,
+    href: "/pdf/xocolatl_whitepaper_v0.1.pdf",
+    isExternal: true,
+
     tags: ["whitepaper", "DeFi"],
   },
   {
@@ -22,8 +23,8 @@ const TECHNICAL_DOCS_LINKS = [
   },
   {
     name: "Auditoría Ciberseguridad - Xocolatl",
-    href: "/codices/blog/auditoria-ciberseguridad-xocolatl",
-    isExternal: false,
+    href: "https://github.com/La-DAO/xocolatl-contracts/tree/main/audits/cyberscope",
+    isExternal: true,
     tags: ["DeFi", "Contratos Inteligentes", "Auditoría"],
   },
 ];

@@ -44,7 +44,8 @@ const LinksListCard = ({
   return (
     <div className="flex h-full w-full flex-col rounded-md border-2 border-ldPrimaryOrange-600">
       <div className="bg-primary py-2">
-        <h4 className="px-8 text-xl font-bold text-ldJetBlack">{header}</h4>
+        <h4 className="px-8 text-xl font-bold text-white">{header}</h4>
+
       </div>
       <div className="px-8 py-4 sm:px-6 lg:px-10">{linksList}</div>
     </div>
